@@ -1,6 +1,6 @@
 package com.goranm.newsappbluefactory.api
 
-import com.goranm.newsappbluefactory.NewsResponse
+import com.goranm.newsappbluefactory.model.NewsResponse
 import com.goranm.newsappbluefactory.util.Konstante.Companion.API_KEY
 import retrofit2.Response
 import retrofit2.http.GET

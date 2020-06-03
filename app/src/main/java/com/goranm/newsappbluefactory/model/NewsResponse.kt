@@ -1,4 +1,6 @@
-package com.goranm.newsappbluefactory
+package com.goranm.newsappbluefactory.model
+
+import com.goranm.newsappbluefactory.model.Article
 
 data class NewsResponse(
     val articles: List<Article>,
