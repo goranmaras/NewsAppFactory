@@ -16,4 +16,7 @@ interface ArticleDao {
     @Delete
     suspend fun deleteArticle(article: Article)
 
+    //saveing all
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun upsertList(articles: List<Article>)
 }

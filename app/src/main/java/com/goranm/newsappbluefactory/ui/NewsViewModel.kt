@@ -1,8 +1,10 @@
 package com.goranm.newsappbluefactory.ui
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goranm.newsappbluefactory.model.Article
 import com.goranm.newsappbluefactory.model.NewsResponse
 import com.goranm.newsappbluefactory.repository.NewsRepository
 import com.goranm.newsappbluefactory.util.Resource
@@ -34,6 +36,10 @@ class NewsViewModel(
             }
         }
         return Resource.Error(response.message())
+    }
+
+    fun saveArticles(articles : List<Article> ) = viewModelScope.launch {
+        newsRepository.upsertAll(articles)
     }
 
 }
