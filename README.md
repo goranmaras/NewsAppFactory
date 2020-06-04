@@ -2,8 +2,11 @@
 
 Aplikacija koja prikazuje breaking news u RecView-u i sprema ih u bazu.
 
-[https://github.com/goranmaras/NewsAppFactory/blob/master/ZaBlueFactorySlika1.PNG]
-[https://github.com/goranmaras/NewsAppFactory/blob/master/ZaBlueFactorySlika2.PNG]
+![Slika](https://github.com/goranmaras/NewsAppFactory/blob/master/ZaBlueFactorySlika1.PNG)
+![Slika](https://github.com/goranmaras/NewsAppFactory/blob/master/ZaBlueFactorySlika2.PNG)
+
+
+
 
 # MVVM Arhitektura
 
