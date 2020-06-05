@@ -1,5 +1,7 @@
 package com.goranm.newsappbluefactory.ui.fragments
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.View
 import android.webkit.WebViewClient
@@ -20,10 +22,22 @@ class ArticleFragment : Fragment(R.layout.fragment_article){
         viewModel = (activity as NewsActivity).viewModel
 
         val article = args.article
-        webView.apply {
-            webViewClient = WebViewClient()
-            loadUrl(article.url)
+        if (article==null){
+            val builder = AlertDialog.Builder(context)
+            builder.setCancelable(true)
+            builder.setMessage("Došlo je do greške")
+
+            builder.setNegativeButton("U redu", DialogInterface.OnClickListener { dialog, which ->
+                dialog.cancel()
+            })
+            builder.show()
+        }else{
+            webView.apply {
+                webViewClient = WebViewClient()
+                loadUrl(article.url)
+            }
         }
+
     }
 
 }
